@@ -1,0 +1,21 @@
+.section {
+  background: var(--black);
+  padding: var(--section-padding) var(--content-padding);
+  border-top: 1px solid var(--gold-dim);
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}

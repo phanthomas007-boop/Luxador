@@ -1,0 +1,41 @@
+.hduo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.hard {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: var(--heading-size);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.soft {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: calc(var(--body-size) + 1px);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.dark .hard { color: var(--text-light); }
+.dark .soft { color: var(--text-muted); }
+.light .hard { color: var(--text-primary); }
+.light .soft { color: var(--text-body); }
+.copper .soft { color: var(--gold); }
+
+.hero .hard { font-size: clamp(32px, 4vw, 56px); }
+.hero .soft { font-size: clamp(16px, 1.4vw, 21px); }
+
+.section .hard { font-size: var(--heading-size); }
+.section .soft { font-size: calc(var(--body-size) + 1px); }
+
+.card .hard { font-size: 18px; font-weight: 700; }
+.card .soft { font-size: var(--small-size); }

@@ -1,0 +1,26 @@
+.section {
+  background: var(--white);
+  padding: var(--section-padding) var(--content-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.num {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(42px, 4vw, 56px);
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}

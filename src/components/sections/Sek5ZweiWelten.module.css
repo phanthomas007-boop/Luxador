@@ -1,0 +1,109 @@
+.wrapper {
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+}
+
+.room {
+  width: 100vw;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.roomVisual {
+  position: relative;
+  border-right: 1px solid var(--gold-dim);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--space-xl);
+  overflow: hidden;
+}
+
+.visualImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.visualOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6); /* Dunkles Overlay */
+  z-index: 1;
+}
+
+.roomNumber {
+  position: relative;
+  z-index: 2;
+  font-weight: 900;
+  font-size: clamp(100px, 16vw, 220px);
+  color: rgba(197, 165, 90, 0.4); /* Heller gemacht um durch das Bild abzustechen */
+  line-height: 0.8;
+}
+
+.roomContent {
+  padding: clamp(40px, 6vw, 80px) clamp(32px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+  background: var(--black);
+}
+
+.roomLabel {
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.roomTitle {
+  font-weight: 700;
+  font-size: var(--heading-size);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  margin: 0;
+}
+
+.roomSubtitle {
+  font-size: calc(var(--body-size) + 1px);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.roomBody {
+  font-size: var(--body-size);
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  max-width: 440px;
+}
+
+.roomCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  transition: all 0.3s var(--ease);
+  align-self: flex-start;
+  margin-top: var(--space-sm);
+}
+
+.roomCta:hover { gap: 14px; }
+.arrow { transition: transform 0.3s var(--ease); }
+
+@media (max-width: 768px) {
+  .room { grid-template-columns: 1fr; }
+  .roomVisual { height: 25dvh; border-right: none; border-bottom: 1px solid var(--gold-dim); }
+}

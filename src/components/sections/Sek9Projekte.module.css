@@ -1,0 +1,54 @@
+.wrapper {
+  padding: var(--section-padding) var(--content-padding);
+  background-color: #F2F0EC;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  margin-bottom: var(--space-2xl);
+  width: 100%;
+}
+
+.textBlock {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.6;
+  color: var(--text-dark-secondary);
+}
+
+.emptyProjectsGrid {
+  height: 20vh; /* Holder for future rows */
+  width: 100%;
+}
+
+.cta {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  text-decoration: none;
+  border: 1px solid var(--text-dark-secondary);
+  padding: 16px 48px;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.cta:hover {
+  background: var(--text-dark);
+  color: #F2F0EC;
+}

@@ -1,0 +1,159 @@
+/* === SECTION SYSTEM === 
+   Every section uses these EXACT same classes.
+   No exceptions. No HDuo. No custom sizes.
+*/
+
+/* --- Section Label (gold, uppercase, 13px) --- */
+.sectionLabel {
+  font-family: var(--font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+}
+
+/* --- Section Heading (always 2 lines, same size) --- */
+.sectionHeading {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: var(--heading-size);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.sectionHeading.onWhite { color: var(--black); }
+.sectionHeading.onBlack { color: var(--white); }
+
+/* --- Section Intro (below heading, 17px) --- */
+.sectionIntro {
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+.sectionIntro.onWhite { color: var(--text-body); }
+.sectionIntro.onBlack { color: var(--text-muted); }
+
+/* --- Body Text (paragraphs, 16px) --- */
+.bodyText {
+  font-family: var(--font);
+  font-size: var(--body-size);
+  line-height: 1.75;
+  margin: 0;
+}
+.bodyText.onWhite { color: var(--text-body); }
+.bodyText.onBlack { color: rgba(255,255,255,0.6); }
+
+/* --- Body Bold (quote-style with gold left border) --- */
+.bodyBold {
+  font-family: var(--font);
+  font-size: var(--body-size);
+  line-height: 1.75;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--gold);
+}
+.bodyBold.onWhite { color: var(--black); }
+.bodyBold.onBlack { color: var(--white); }
+
+/* --- Stat Number --- */
+.statValue {
+  font-family: var(--font);
+  font-weight: 300; /* Viel edler für Immobilien als 800 */
+  font-size: clamp(42px, 4vw, 56px);
+  line-height: 1;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+}
+
+/* --- Stat Label (16px, bold) --- */
+.statLabel {
+  font-family: var(--font);
+  font-size: var(--body-size);
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* --- Stat Description (14px, muted) --- */
+.statDesc {
+  font-family: var(--font);
+  font-size: var(--small-size);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* --- Card Container (black bg, gold border, 12px radius) --- */
+.card {
+  background: var(--black);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--radius);
+  transition: all 0.35s var(--ease);
+}
+.card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 6px 24px rgba(197, 165, 90, 0.1);
+  transform: translateY(-3px);
+}
+
+/* --- Card Title (17px, white) --- */
+.cardTitle {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--white);
+  margin: 0;
+}
+
+/* --- Card Text (14px, muted) --- */
+.cardText {
+  font-family: var(--font);
+  font-size: var(--small-size);
+  line-height: 1.65;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+/* --- Card Number (small, muted) --- */
+.cardNum {
+  font-family: var(--font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* --- Card Icon (gold diamond) --- */
+.cardIcon {
+  font-size: 10px;
+  color: var(--gold);
+}
+
+/* --- Card Arrow --- */
+.cardArrow {
+  font-size: 16px;
+  color: var(--gold-dim);
+  transition: all 0.3s var(--ease);
+}
+.card:hover .cardArrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+/* --- Section Container --- */
+.sectionInner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* --- Section Header Block (label + heading + intro) --- */
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 620px;
+}

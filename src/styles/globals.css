@@ -1,0 +1,75 @@
+:root {
+  /* === ZWEI FARBEN + GOLDEN === */
+  --white: #FFFFFF;
+  --black: #0A0A0A;
+  --gold: #C5A55A;
+  --gold-dim: rgba(197, 165, 90, 0.3);
+  --gold-subtle: rgba(197, 165, 90, 0.08);
+  
+  --text-primary: #0A0A0A;
+  --text-body: #555555;
+  --text-light: #FFFFFF;
+  --text-muted: rgba(255,255,255,0.5);
+  
+  --border-gold: 1px solid var(--gold-dim);
+  --border-light: 1px solid rgba(10,10,10,0.06);
+  
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-hover: 0 8px 32px rgba(0,0,0,0.15);
+  
+  /* Consistent spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 56px;
+  --space-2xl: 80px;
+  --space-3xl: 120px;
+
+  --content-max: 1100px;
+  --content-padding: clamp(24px, 5vw, 80px);
+  --section-padding: clamp(80px, 10dvh, 140px);
+  
+  --radius: 12px;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  
+  /* === CONSISTENT TYPOGRAPHY (same everywhere) === */
+  --font: 'Inter', -apple-system, system-ui, sans-serif;
+  --label-size: 13px;
+  --heading-size: clamp(28px, 3vw, 42px);
+  --body-size: 16px;
+  --small-size: 14px;
+  --stat-size: clamp(36px, 3.5vw, 52px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+html { scroll-behavior: auto; }
+
+body {
+  background: var(--white);
+  color: var(--text-primary);
+  font-family: var(--font);
+  font-size: var(--body-size);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (hover: none) {
+  *, *::before, *::after { cursor: auto; }
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+img, video { display: block; max-width: 100%; }

@@ -1,0 +1,57 @@
+.wrapper {
+  padding: var(--section-padding) var(--content-padding);
+  background-color: #111111;
+  min-height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xl);
+  text-align: center;
+}
+
+.ctaButton {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--text-accent);
+  padding: 18px 56px;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.ctaButton:hover {
+  background: var(--text-accent);
+  color: #111111;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.contactInfo a {
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(14px, 1.2vw, 18px);
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-smooth);
+}
+
+.contactInfo a:hover {
+  color: var(--text-primary);
+}
+
+.divider {
+  color: var(--text-dark-secondary);
+}

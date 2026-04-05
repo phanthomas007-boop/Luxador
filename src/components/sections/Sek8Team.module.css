@@ -1,0 +1,86 @@
+.wrapper {
+  padding: var(--section-padding) var(--content-padding);
+  background-color: #111111;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  margin-bottom: var(--space-4xl);
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  width: 100%;
+  margin-bottom: var(--space-4xl);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.imagePlaceholder {
+  aspect-ratio: 3/4;
+  width: 100%;
+  background-color: #1A1917;
+  position: relative;
+  overflow: hidden;
+  filter: saturate(0.3);
+  transition: filter 0.5s var(--ease-smooth);
+}
+
+.imagePlaceholder:hover {
+  filter: saturate(1);
+}
+
+.name {
+  font-family: var(--font-space), 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.5vw, 22px);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.role {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 1vw, 16px);
+  color: var(--text-accent);
+  margin: 0;
+}
+
+.cta {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--text-accent);
+  padding: 16px 48px;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.cta:hover {
+  background: var(--text-accent);
+  color: #111111;
+}

@@ -1,0 +1,90 @@
+.wrapper {
+  height: 400dvh; /* Allows room for scroll distance */
+  position: relative;
+  background-color: #C8C4BC; /* Beton-hell fallback */
+}
+
+.sticky {
+  position: absolute; /* Using ScrollTrigger pin, so we can let GSAP handle the wrapper naturally */
+  top: 0;
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+}
+
+.room {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+}
+
+.roomImage {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: #111111;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #1A1917; /* Simple dark box, no texture */
+}
+
+.roomContent {
+  width: 50%;
+  height: 100%;
+  padding: clamp(2rem, 5vw, 6rem); /* Responsive clamp instead of 8vw 6vw */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xl);
+  color: var(--text-dark);
+}
+
+.text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  max-width: 600px;
+}
+
+.cta {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-top: var(--space-md);
+  align-self: flex-start;
+  transition: opacity 0.3s var(--ease-smooth);
+}
+
+.cta:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .room {
+    flex-direction: column;
+  }
+  .roomImage {
+    width: 100%;
+    height: 40%;
+  }
+  .roomContent {
+    width: 100%;
+    height: 60%;
+    padding: var(--space-lg);
+  }
+}

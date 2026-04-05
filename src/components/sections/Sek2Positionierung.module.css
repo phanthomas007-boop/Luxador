@@ -1,0 +1,104 @@
+.wrapper {
+  position: relative;
+  min-height: 100dvh;
+  background-color: #111111; /* Pure dark void */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: var(--section-padding) 0;
+}
+
+/* The vertical thread from the Hero */
+.centerLine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: rgba(139, 111, 71, 0.15); /* Faded var(--brand-accent) */
+  z-index: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.leftCol {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Brutalist Typography Watermark */
+.watermark {
+  position: absolute;
+  font-family: var(--font-space), 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 28vw; /* Massive */
+  line-height: 0.8;
+  color: #161513; /* Extremely subtle contrast against #111111 */
+  left: -40%;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  letter-spacing: -0.04em;
+}
+
+.rightCol {
+  padding-left: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.storyText {
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(16px, 1.2vw, 20px);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-4xl);
+  max-width: 580px;
+}
+
+.labels {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--brand-accent);
+}
+
+.dot {
+  margin: 0 12px;
+  color: var(--text-dark-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .centerLine {
+    left: var(--content-padding);
+  }
+  
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .watermark {
+    top: -20vh;
+    left: 0;
+    font-size: 40vw;
+  }
+
+  .rightCol {
+    padding-left: var(--space-3xl);
+  }
+}

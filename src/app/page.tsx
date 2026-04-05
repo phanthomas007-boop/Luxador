@@ -1,66 +1,56 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { HeroSection } from '@/components/sections/HeroSection';
+import { Sek2ScrollFill } from '@/components/sections/Sek2ScrollFill';
+import { Sek3Bautraegerschaft } from '@/components/sections/Sek3Bautraegerschaft';
+import { SekVorherNachher } from '@/components/sections/SekVorherNachher';
+import { Sek4Zahlen } from '@/components/sections/Sek4Zahlen';
+import { Sek5ZweiWelten } from '@/components/sections/Sek5ZweiWelten';
+import { Sek6Leistungen } from '@/components/sections/Sek6Leistungen';
+import { Sek7TorReveal } from '@/components/sections/Sek7TorReveal';
+import { Sek8Prozess } from '@/components/sections/Sek8Prozess';
+import { Sek9Team } from '@/components/sections/Sek9Team';
+import { Sek10Projekte } from '@/components/sections/Sek10Projekte';
+import { Sek11CTA } from '@/components/sections/Sek11CTA';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      {/* Hero — Dark, Video, Value Prop */}
+      <HeroSection />
+
+      {/* Scroll-Fill — Links-bündig, zwei Zeilen, weißer Text füllt sich */}
+      <Sek2ScrollFill />
+
+      {/* Das Problem — Weiss, Text + schwarze Stat-Cards */}
+      <Sek3Bautraegerschaft />
+
+      {/* NEU: Vorher/Nachher — Schwarz, Split mit Slider */}
+      <SekVorherNachher />
+
+      {/* Zahlen — Dark, 4er Grid */}
+      <Sek4Zahlen />
+
+      {/* Horizontal Scroll — 3 Geschäftsfelder */}
+      <Sek5ZweiWelten />
+
+      {/* Leistungen — Weiss, 6 schwarze Cards */}
+      <Sek6Leistungen />
+
+      {/* Tor-Reveal — LUXO|DAN Gate */}
+      <Sek7TorReveal />
+
+      {/* Prozess — Weiss, 5 schwarze Cards */}
+      <Sek8Prozess />
+
+      {/* Team — Weiss, 3 Portrait Cards */}
+      <Sek9Team />
+
+      {/* Projekte — Schwarz, Grid */}
+      <Sek10Projekte />
+
+      {/* CTA — Schwarz, Final */}
+      <Sek11CTA />
+    </main>
   );
 }

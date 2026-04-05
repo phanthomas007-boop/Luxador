@@ -1,0 +1,72 @@
+.wrapper {
+  height: 400dvh;
+  position: relative;
+  background-color: #111111;
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+.header {
+  align-self: flex-start;
+}
+
+.visualArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 10/6;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.path {
+  stroke: var(--text-accent);
+}
+
+.node {
+  fill: var(--text-primary);
+}
+
+.labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  transform: translate(-50%, 0);
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1vw, 16px);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
