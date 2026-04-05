@@ -25,6 +25,7 @@ export const Sek7TorReveal = () => {
         end: '+=200%',
         scrub: 1.5,
         pin: true,
+        anticipatePin: 1,
       }
     });
     
