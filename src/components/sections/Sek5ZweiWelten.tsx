@@ -57,9 +57,8 @@ export const Sek5ZweiWelten = () => {
         // Die Scroll-Distanz wird deutlich verlängert. 
         // Nutzer müssen weiter runterscrollen, wodurch die Bewegung nach rechts viel langsamer und kontrollierter abläuft.
         end: () => '+=' + (trackRef.current!.scrollWidth * 1.5),
-        scrub: 1.5, // Butterweicher Nachlauf
+        scrub: 1.5,
         pin: true,
-        anticipatePin: 1, // Hilft gegen das "Ruckeln" beim Einrasten (speziell wenn die Handy-Adressleiste verschwindet)
         invalidateOnRefresh: true,
       }
     });
