@@ -104,6 +104,21 @@
 .arrow { transition: transform 0.3s var(--ease); }
 
 @media (max-width: 768px) {
-  .room { grid-template-columns: 1fr; }
-  .roomVisual { height: 25dvh; border-right: none; border-bottom: 1px solid var(--gold-dim); }
+  .room { 
+    grid-template-columns: 1fr; 
+    height: 100dvh;
+  }
+  .roomVisual { 
+    height: 40dvh; 
+    border-right: none; 
+    border-bottom: 1px solid var(--gold-dim); 
+    padding: var(--space-md);
+  }
+  .roomContent {
+    padding: var(--space-lg);
+    gap: var(--space-sm);
+  }
+  .roomNumber {
+    font-size: clamp(60px, 16vw, 100px);
+  }
 }

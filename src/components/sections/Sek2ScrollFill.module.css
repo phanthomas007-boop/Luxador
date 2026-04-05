@@ -38,7 +38,7 @@
   font-size: clamp(32px, 4.5vw, 60px);
   line-height: 1.15;
   letter-spacing: -0.025em;
-  display: block;
+  display: inline;
 
   background-clip: text;
   -webkit-background-clip: text;
