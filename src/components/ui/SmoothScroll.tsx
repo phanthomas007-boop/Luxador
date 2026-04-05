@@ -20,11 +20,6 @@ export const SmoothScroll = () => {
       ignoreMobileResize: true,
     });
 
-    // Zwingt Touch-Geräte in einen synchronen Scroll-Thread (Behebt Apple/Android Asynchronität)
-    if (typeof window !== 'undefined' && ScrollTrigger.isTouch === 1) {
-      ScrollTrigger.normalizeScroll(true);
-    }
-
     const lenis = new Lenis({
       duration: 1.2, // Die Länge/Geschwindigkeit des Smooth-Scrolls (1.2 ist Standard hochwertig)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple-like easing
