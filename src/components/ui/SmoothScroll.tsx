@@ -9,6 +9,10 @@ export const SmoothScroll = () => {
   useEffect(() => {
     // Registriere ScrollTrigger (nur zur Sicherheit)
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Zwingt das Handy, alle GSAP Animationen über den Grafikchip laufen zu lassen. 
+    // Das eliminiert das Mikro-Zittern ("Hängen") der normalen Animationen.
+    gsap.config({ force3D: true });
 
     // CRITICAL MOBILE FIX: Verhindert Ruckeln und weiße Balken, 
     // wenn die Adresszeile am Handy ein- oder ausklappt.
@@ -25,6 +29,7 @@ export const SmoothScroll = () => {
       duration: 1.2, // Die Länge/Geschwindigkeit des Smooth-Scrolls (1.2 ist Standard hochwertig)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple-like easing
       autoRaf: false, // GSAP handles RAF
+      touchMultiplier: 2, // Smooths out micro-jitters from the user's thumb
     });
 
     // Synchronisiere Lenis Scroll in Echtzeit mit GSAP ScrollTrigger
