@@ -10,6 +10,12 @@ export const SmoothScroll = () => {
     // Registriere ScrollTrigger (nur zur Sicherheit)
     gsap.registerPlugin(ScrollTrigger);
 
+    // CRITICAL MOBILE FIX: Verhindert Ruckeln und weiße Balken, 
+    // wenn die Adresszeile am Handy ein- oder ausklappt.
+    ScrollTrigger.config({
+      ignoreMobileResize: true,
+    });
+
     const lenis = new Lenis({
       duration: 1.2, // Die Länge/Geschwindigkeit des Smooth-Scrolls (1.2 ist Standard hochwertig)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple-like easing

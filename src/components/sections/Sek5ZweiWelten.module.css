@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
   background: var(--black);
 }
@@ -106,10 +106,10 @@
 @media (max-width: 768px) {
   .room { 
     grid-template-columns: 1fr; 
-    height: 100dvh;
+    height: 100vh;
   }
   .roomVisual { 
-    height: 40dvh; 
+    height: 35vh; 
     border-right: none; 
     border-bottom: 1px solid var(--gold-dim); 
     padding: var(--space-md);

@@ -23,8 +23,9 @@ export const Sek7TorReveal = () => {
         trigger: wrapperRef.current,
         start: 'top top',
         end: '+=200%',
-        scrub: 1,
+        scrub: 1.5,
         pin: true,
+        anticipatePin: 1,
       }
     });
     
